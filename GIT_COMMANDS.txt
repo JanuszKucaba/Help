@@ -1,4 +1,4 @@
-#Notes
+Git commands
 git config --global user.name "nazwisko" - zmiana nazwiska globalnie
 git config --global user.email "mail@domena.pl" - zmiana maila globalnie
 git congif user.name "nazwisko" - zmiana nazwiska dla danego repozytorium
