@@ -1,5 +1,6 @@
 # Checklista Python
 
+### Minimalna wiedza
 1. If – instrukcje warunkowe	else, elif, co True, co False, <, > equal
 2.	zmienne	czym się == vs =
 3.	typy	int, float, str, dynamiczne typowanie,
