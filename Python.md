@@ -47,7 +47,7 @@
 - instrukcja 'zatrzymaj' -	break
 - instrukcja 'kontynuuj' -	continue
 - pętla 'dla'	- for
-### Funckje
+### Funkcje
 - definiowanie funkcji	- def nazwa_funkcji():
 - definiowanie funkcji z parametrem	- def nazwa(parametr/-y):
 - funkcja zwracająca wartość	- def nazwa(): return wartość
