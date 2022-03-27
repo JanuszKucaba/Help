@@ -1,62 +1,209 @@
 # Checklista Python
 
-### Minimalna wiedza
-1. If – instrukcje warunkowe	else, elif, co True, co False, <, > equal
-2.	zmienne	czym się == vs =
-3.	typy	int, float, str, dynamiczne typowanie,
-4.	listy	Lista = [], lista.append(). Lista.extend(). Lista.index(), lista.pop()
-5.	tuple	Tupla = (1, 2, 3), t[1] # 2, t.index(1) # 0, t.count(3) # 2, zawsze używaj tupli zamiast listy jak się da
-6.	Set-y	trzyma tylko obiekty, które są unikalne, s = {1, 1,1, 1, 1} # jedynka i tak będzie tylko raz
-7.	Dict-y słowniki	Slownik = {1: 'a', 2: 'b'}, for key, value in slownik.items(): pass, jak wygląda dostęp, po co są klucze, jak się iterować po kluczach, wartościach, wartościach i kluczach, bardzo szybki, hashing, hashowanie słownika
-8.	for	for element in [1, 2, 3]: print(x)
-9.	zip	for x, y in zip([1, 2, 3], [4, 5, 6]): print(x) # 1; print(y) # 4, różne długości list
-10.	all i any	all([True, True, True]) # True; all([True, True, False]) # False; any([False, False, False]) # False; any([False, False, False]) # True, any all na pustę kolekcji
-11.	range	for x in range(1, 10): print(x), jak się używa, do czego służy, jak wystartować nie od zera itp.
-12.	fstring	X = 10; print(f'x = {x}')
-13.	Slice-ing	Lista = [1, 2, 3, 4], nowa_lista = lista[1:2] # [2], co to jest, zakresy, czy modyfikuje, czy zwraca nową
-14.	funkcje	co to jest funkcja, parametry, return, a jak nie ma, jak przekazać funkcje jako parametr do drugiej
-15.	args i kwargs	def func(*args, **kwargs): pass – przyjmowanie wszystkiego
-16.	mutable i immutable (zmienne i niezmienne)	tupla jest niezmienna, listę można modyfikować co to znaczy, jaki ma to wpływ na program i jak jest ze strigniem, tupla = (1, 2, 3), tupla[0] = 3 # exception
-17.	tuple unpacking (rozpakowywanie tupli)	x, y  = (1 ,2)
-18.	shallow copy and deep copy	Lista = (1, {'a':2}, 3); nowa_lista = lista[:], które kopiowanie jest lepsze i czym od siebie się różnią
-19.	list comprehension	listy składane [x for x in range(10)]
-20.	dict comprehension	{x: x for x in range(10)}
-21.	set comprehension	{x for x in range(10)}
-22.	generatory	do czego służa, jaki problem generują, czemu oszdzędza pamięć, jak go napisać, do czego jest yield, czy jeden generator może wywołać drugi generator
-23.	dekorator	do czego służą, kiedy się ich używa, jak napisać dekorator @, po co się je pisze, jak napisać własny, kiedy można go użyć
-24.	OOP	tworzenie obiektów, jak się tworzy klasy, po co się tworzy klasy, co nam to upraszcza, czym się różni instancja od obiektu, do czego służy metoda init
-25.	wszystko jest obiektem	
-26.	dziedziczenie	po co jest dziedziczenie, co to znaczy że jedna dziedziczy po drugiej, jaki problemy rozwiązuje, do czego to się używa, przed czym nas to chroni
-27.	zmienne statyczne	
-28.	metody statyczne	
-29.	metody abstrakcyjne	
-30.	kompozycja, a dziedziczenie oraz agregacja	
-31.	magic methods	
-32.	rekurencja	wywołanie funkcji wewnątrz funkcji, 
-33.	context manager	
-34.	exceptions	
-35.	JSON	co to jest, do czego służy, jak to się ma do dicta,
-36.	namedtuple	jaki problem rozwiazuje, czy można się iterować jak po tuply
-37.	dataclasses	generator kodu
-38.	Multithreading, asyncIO	
-39.	lambda	do czego służy, jak używać z filter i map
-40.	iterable iterator	
-41.	import	import modułów, w jakiej kolejności, czemu nie importować z *
-42.	PIP	packet installer for python, jak używać, co znaczy -r, jak sprawdzać wersję
-43.	pliki	jak czytać
-44.	type annotations	
-45.	property	dlaczego nie trzeba robić settterów i getterów
-46.	pep8	
-47.	enumerate	jak go używać, jak wystartować nie od 0
-48.	itertools	poczytać dokumentację
-49.	testy jednostkowe	pytest, co to jest, do czego służy
-50.	regex	regular expressions
-51.	virtual enviroment	
-52.	linting	pylint
-53.	assignment expression	Od 3.8 if (n := len(a)) > 10: pass
-54.	structural pattern matching (od 3.10)	Match / case (tak jak switch/case)
-55.	przekazywanie argumentów do funkcji (metod)	
-56.	wyrażenia generatorowe	
-57.	multiprocessing	
-58.	python turtle
-59.	Big O notation
+### Minimalna wiedza i przykładowe pytania
+- instrukcje warunkowe -	if, else, elif, ==, !=, <=, >=
+- logika Boole'a - True / False
+- czym się różnią - == vs =
+- typy - int, float, str, dynamiczne typowanie,
+- listy -	lista = [], lista.append(), lista.extend(), lista.index(), lista.pop()
+- tuple (krotki) - tupla = (1, 2, 3), t[1] # 2, t.index(1) # 0, t.count(3) # 2 - zawsze używaj tupli zamiast listy jak się da
+- set-y (zbiory)	- trzyma tylko obiekty, które są unikalne, s = {1, 1,1, 1, 1} # jedynka i tak będzie tylko raz
+- dict-y (słowniki)	- słownik = {1: 'a', 2: 'b'}, for key, value in slownik.items(): pass - jak wygląda dostęp, po co są klucze, jak się iterować po kluczach, wartościach, wartościach i kluczach, bardzo szybki, hashing, hashowanie słownika
+- for	- for element in [1, 2, 3]: print(x)
+- zip	- for x, y in zip([1, 2, 3], [4, 5, 6]): print(x) # 1; print(y) # 4, różne długości list
+- all i any -	all([True, True, True]) # True; all([True, True, False]) # False; any([False, False, False]) # False; any([False, False, False]) # True, any all na pustej kolekcji
+- range	- for x in range(1, 10): print(x), jak się używa, do czego służy, jak wystartować nie od zera itp.
+- fstring	- x = 10; print(f'x = {x}')
+- slice-ing	 - lista = [1, 2, 3, 4], nowa_lista = lista[1:2] # [2], co to jest, zakresy, czy modyfikuje, czy zwraca nową
+- funkcje	- co to jest funkcja, parametry, return, a jak nie ma, jak przekazać funkcje jako parametr do drugiej
+- args i kwargs	- def func(*args, **kwargs): pass – przyjmowanie wszystkiego
+- mutable i immutable (zmienne i niezmienne) - tupla jest niezmienna, listę można modyfikować co to znaczy, jaki ma to wpływ na program i jak jest ze strigniem, tupla = (1, 2, 3), tupla[0] = 3 # exception
+- tuple unpacking (rozpakowywanie tupli) -	x, y  = (1 ,2)
+- shallow copy and deep copy - lista = (1, {'a':2}, 3); nowa_lista = lista[:], które kopiowanie jest lepsze i czym od siebie się różnią
+- list comprehension (listy składane) - [x for x in range(10)]
+- dict comprehension - {x: x for x in range(10)}
+- set comprehension -	{x for x in range(10)}
+- generatory - do czego służą, jaki problem generują, czemu oszdzędza pamięć, jak go napisać, do czego jest yield, czy jeden generator może wywołać drugi generator
+- wyrażenia generatorowe
+- dekoratory - do czego służą, kiedy się ich używa, jak napisać dekorator @, po co się je pisze, jak napisać własny, kiedy można go użyć
+- OOP	- tworzenie obiektów, jak się tworzy klasy, po co się tworzy klasy, co nam to upraszcza, czym się różni instancja od obiektu, do czego służy metoda init
+- należy pamiętać, że wszystko jest obiektem	
+- dziedziczenie	po co jest dziedziczenie, co to znaczy że jedna dziedziczy po drugiej, jaki problemy rozwiązuje, do czego to się używa, przed czym nas to chroni
+- zmienne statyczne
+- metody statyczne
+- metody abstrakcyjne
+- kompozycja, a dziedziczenie oraz agregacja
+- magic methods	- magiczne metody
+- rekurencja	wywołanie funkcji wewnątrz funkcji
+- context manager
+- exceptions
+- JSON	- co to jest, do czego służy, jak to się ma do dicta
+- namedtuple - jaki problem rozwiazuje, czy można się iterować jak po tuply
+- dataclasses	generator kodu
+- multithreading, asyncIO
+- multiprocessing
+- lambda	do czego służy, jak używać z filter i map
+- iterable iterator
+- import	import modułów, w jakiej kolejności, czemu nie importować z *
+- PIP	packet installer for python, jak używać, co znaczy -r, jak sprawdzać wersję
+- pliki	jak czytać
+- type annotations
+- property	dlaczego nie trzeba robić settterów i getterów
+- pep8
+- enumerate	jak go używać, jak wystartować nie od 0
+- itertools	poczytać dokumentację
+- testy jednostkowe	pytest, co to jest, do czego służy
+- regex	- regular expressions
+- virtual enviroment
+- linting	pylint
+- assignment expression	Od 3.8 if (n := len(a)) > 10: pass
+- structural pattern matching (od 3.10)	Match / case (tak jak switch/case)
+- przekazywanie argumentów do funkcji (metod)
+- python turtle
+- Big O Notation
+###
+- Czy Python może być używany do programowania po stronie klienta WWW i serwera WWW? A który najlepiej pasuje do Pythona ?
+- Wymień co najmniej 3-4 korzyści płynące z używania Pythona w porównaniu z innymi językami skryptowymi, takimi jak Javascript.
+- Wyjaśnij listę, krotki, zestaw i słownik i zapewnij co najmniej jedno wystąpienie, w którym można użyć każdego z tych typów kolekcji.
+- Czy Python umożliwia programowanie w ustrukturyzowanym stylu ?
+- Czym jest oprogramowanie PIP w świecie Pythona ?
+- Jakie powinno być typowe środowisko do tworzenia aplikacji w języku Python ?
+- Jakich narzędzi można użyć do testowania jednostkowego kodu Pythona ?
+- Czym różnią się pętle For i While w Pythonie i kiedy zdecydujesz się ich używać ?
+- W jaki sposób typy danych są zdefiniowane w Pythonie i ile bajtów przechowują typy danych całkowite i dziesiętne ?
+- W jaki sposób korzystasz z tablic w Pythonie ?
+- Jak zaimplementować JSON, biorąc pod uwagę, że Python najlepiej nadaje się do aplikacji po stronie serwera ?
+- Jaki jest najlepszy sposób analizowania ciągów znaków i znajdowania wzorców w Pythonie ?
+- Jakie bazy danych są obsługiwane przez Python ?
+- Jaki jest cel funkcji _init_(self) w Pythonie ?
+- Jakie jest znaczenie parametru „self” w metodzie obiektowej? Czy zawsze powinniśmy nazywać ten parametr „self” ?
+- Czym różni się funkcja Lambda od zwykłej funkcji w Pythonie ?
+- Jak wygląda obsługa wyjątków w Pythonie ?
+- Jaki jest punkt początkowy wykonywania kodu w Pythonie ?
+- Wymień niektóre z ważnych modułów, które są dostępne w Pythonie.
+- Których modułów Pythona można użyć do pomiaru wydajności kodu aplikacji ?
+- Jak uruchomić procesy podrzędne w procesie głównym aplikacji Python ?
+- W jaki sposób można zaimplementować wątki w kodzie serwera ?
+- Czy musimy wywoływać metody jawne, aby zniszczyć pamięć przydzieloną w Pythonie ?
+- Czy ten sam kod Pythona działa na wielu platformach bez żadnych zmian ?
+- Jak stworzyć aplikację opartą na GUI w Pythonie dla funkcjonalności po stronie klienta ?
+- Jakie są różne zmienne środowiskowe identyfikowane przez Pythona ?
+- Co to są krotki Pythona i czym się różnią od list ?
+- Co robi symbol „#” w Pythonie ?
+- Co robi string_var.strip() ?
+- Co to są operatory członkostwa w Pythonie? Napisz przykład, aby wyjaśnić oba.
+- Napisz kod, aby wyświetlić aktualny czas.
+- Jaki jest wynik print str[4:] if str = „język Python” ?
+- Napisz polecenie, aby pobrać wszystkie klucze ze słownika.
+- Napisz polecenie, aby przekonwertować ciąg znaków na int w Pythonie.
+- Co to help() i dir() w Pythonie ?
+- Co rozumiesz przez „pakiety” w Pythonie?
+- Co to jest range() w Pythonie? Podaj przykład, aby to wyjaśnić.
+- Jaka jest różnica między abs() a fabs() ?
+- Co to jest instrukcja from import i napisz dla niej składnię ?
+- Jaka jest różnica między locals() i globals() ?
+- Jakie jest zastosowanie asercji w Pythonie ?
+- Jaka jest różnica między kopiowaniem płytkim, a głębokim ?
+- Jaka instrukcja jest używana w Pythonie, jeśli instrukcja jest wymagana składniowo, ale nie jest wymagana żadna akcja dla programu ?
+- Do czego odnosi się PEP8 ?
+- Co to są *args i **kwargs ?
+- napisz 	funkcję generującą kolejne elementy ciągu Fibonacciego
+- zamień 	wartości dwóch zmiennych
+- co to jest i do czego służy type ?
+- czy parametry do funkcji są w pythonie przekazywanie przez wartość, czy referencję ?
+- jakie są podstawowe typy w pythonie ?
+- czy python jest językiem kompilowanym czy skryptowym ? słabo czy silnie typowanym ? 
+- co to jest duck-typing ?
+- do czego służą i czym się różnią metody: __init__ vs __new__, __str__ vs __repr__, __add__ vs __radd__
+- czym się różni metoda od funkcji ?
+- co to jest self ?
+- czy self jest słowem kluczowym ?
+- co to jest słowo kluczowe (keyword) ?
+- co oznacza instrukcja pass ? kiedy można jej użyć ?
+- co to są built-iny ?
+- jakie znasz sposoby na konkatenację stringów ? których warto, a których nie warto używać i dlaczego
+- czym się różni list i dict ?
+- czym się różni set i list ?
+- co to jest list/dict comprehension ?
+- jak działa wielokrotne dziedziczenie w pythonie ?
+- jak działa słownik ?
+- jak działa 	tablica ?
+- co to jest ___slots___ ?
+- dekoratory (z parametrem) + dekorowanie klas (po co do czego ?)
+- programowanie funkcyjne ( co to ? + closure )
+- multiprocessing vs multithreading vs asyncio (co to programowanie asynchroniczne, GIL itp.
+- co to są indexy, iteratory, generatory (yield), list of comprehension, map ?
+- czym się różni tupla vs lista vs słownik ?
+- co to duck typing ?
+- czy init jest konstruktorem ?
+- jak odwołać się do metod prywatnych spoza klasy ?
+- co to polimorfizm ? 
+- wzorce projektowe
+- rekurencja
+- złożoność obliczeniowa
+- jakie znasz metody radzenia sobie z problemami IO bound, CPU bound, różnice między nimi, wady zalety
+- co to jest korutyna ?
+- GIL, co to jest, jak działa ?
+- multiprocessing, threading, a GIL ?
+- różnice w działaniu GIL'a między python2, a python3
+- jak działa garbage collector ?
+- co to są generacje GC ?
+- co decyduje w której generacji jest dany obiekt ?
+- co decyduje o czyszczeniu danej generacji ?
+- co tą są shadow references, podaj przykłąd (kod) ?
+- jak naprawić kod z shadow reference ?
+- jak zachowa się garbage collector dla shadow reference i dlaczego tak	się zachowuje ?
+- różnice w działaniu GC dla python2, a python3
+- masz wyciek jak sobie z nim radzisz ?
+- contexmanager
+- co to jest contextmanager z wyrażeniem yield i gdzie go stosujesz ?
+- obsługa wyjątków
+- różnica między public, a protected
+- co to jest metoda prywatna, metoda chroniona i kiedy którą stosować ?
+- co to jest Python i do czego służy ?
+- Co to regex ?
+- Na czym polega 'monkey patching' ?
+- Jaka jest różnica pomiędzy range oraz xrange ?
+- Na czym polegają procesy nazywane 'pickling' oraz 'unpickling'?
+
+### Django
+- jak poradzić sobie z tłumaczeniem aplikacji napisanej w Django ?
+- pola jakiego typu użyjesz w modelu do przechowywania stanu konta użytkownika ?
+- co to jest manager w Django ?
+- co to jest context manager ?
+- czy kiedykolwiek miałeś sytuację, w której ORM cię ograniczał ?
+- czym się różni select_related od prefetch_related ?
+- jakich narzędzi/paczek/aplikacji używasz pisząc aplikację w Django ?
+- co to jest middleware ?
+- co to jest model abstrakcyjny ?
+- co to jest model proxy ?
+- co to są migracje ?
+- co wyróżnia Django na tle innych (pythonowych) webowych frameworków/bibliotek ?
+- jakie bazy danych są oficjalnie wspierane przez Django ?
+- jaka jest aktualna wersja pythona i Django ?
+- czym się różni python 2 od pythona 3 ?
+- co to jest moduł ?
+- co to jest wersja LTS Django ?
+- w jaki sposób (i po co) rozszerzyć bazową klasę User z Django ?
+- co to są szablony ?
+- opisz co się dzieje z zapytaniem HTTP w kontekście aplikacji napisanej w Django
+- do czego służy django.db.transaction.atomic i jak można tego użyć ?
+- którą bazę danych wybierzesz pisząc aplikację w Django i dlaczego ?
+- co to jest, i jak Django pozwala zapobiec: XSS, clickjacking, SQL injection, CSRF ?
+- jak Django zarządza hasłami użytkowników ?
+- co to jest AnonymousUser ?
+- jak sprawdzisz, czy aktualnie zalogowany użytkownik jest superuserem ?
+- jak sprawdzisz czy dany użytkownik ma uprawnienie do wykonania danej akcji ?
+- jak w Django można nadać uprawnienia użytkownikowi ?
+- jak wyślesz użytkownikowi duży plik, który został wygenerowany na jego żądanie ?
+- jak można deployować aplikację napisaną w Django ?
+- co to jest Docker i jak może on pomóc w pisaniu aplikacji (niekoniecznie w Django) ?
+- w jaki sposób działa i na co pozwala panel administratora w Django ?
+- zaprojektowanie 	Twittera/Facebooka/Youtube/....<wstaw dowolna="dowolna" 	web="web" aplikacje="aplikacje"> (requirementy, 	architektura (model, schemat, deployment), dane , bottlenecki, 	technologie)
+- SQL vs NoSQL - (generalnie i w obrebie NoSQL document vs key-value vs column, sharding itp itd)
+- CAP theorem
+- według 	jakich kryteriów można podzielić API aplikacji monolitycznej na mikroserwisy - wady zalety doświadczenia
+- HTTP ( HTTP perssisten, cookieys itp itd) , HTTPS (SSL)
+- Load Balancing, HA, Cacheowanie, DNS itp itd itp itd
+- techniki 	uwierzytelniania w aplikacjach webowych
+- Celery
