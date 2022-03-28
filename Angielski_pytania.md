@@ -1,0 +1,23 @@
+# Częste pytania po angielsku
+
+- tell me about yourself
+- tell me a little about yourself
+- tell me about yourself and why you will be a strong fit for this IT position ?
+- why do you want this job ?
+- where do you see yourself five years from now ?
+- what are yout strengths / weaknesses ?
+- what is your leadership style ?
+- do you have any experience (do you have experienc in ...) ?
+- do you have any references ?
+- can you start tomorrow ?
+- what do you want to know before you start ?
+- do you have any questions ?
+- may I ask you a question ?
+- I would like to know ... ?
+- tell me about a time you dealt with a challenging situation at work
+- why do you want this job ?
+- why should we hire you ?
+- why do you want this particular IT job and what has attracted you to our company ?
+- what are the most important skills in IT and why ?
+- how would you begin a newly assigned IT project ?
+- ...
