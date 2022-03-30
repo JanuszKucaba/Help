@@ -39,3 +39,9 @@
 - interfejsy są ustandaryzowane , każda metoda służy do zrobienia jednej operacji, wywołanie na danym zasobie np. GET spowoduje zwrócenie zasobu, a PUT aktualizację jego wartości
 - żądania są bezstanowe, do zrozumienia odpowiedzi nie jest potrzebna wiedza o poprzednim żądaniu
 - połączenia w odpowiedzi są reprezentowane przez hiperłącza.
+
+## 4. Linux
+- ls - listing plików w danym folderze
+- cd - poruszanie się po folderach
+- su - przelogowanie się na innego użytkownika
+- source - uruchamia plik w obecnej powłoce (konsoli)
