@@ -2,6 +2,7 @@
 1. Terminologia
 2. Chmura AWS
 3. RESTful API
+4. Linux
 
 ## 1. Terminologia
 - CI -	Continuous Integration
