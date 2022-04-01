@@ -1,21 +1,24 @@
 # SQL
 
 ## Terminologia
-- baza danych - plik zorgranizowany tak, by jak najlepiej przechowywać dane
+- baza danych - uporządkowany zbiór danych (informacji, np. loginy, hasła, adresy e-mail, nazwiska, posty), zazwyczaj zorgranizowany jako zestaw tabel powiązanych relacjami, np. książka telefoniczna, katalog bibliteki, użytkownicy portalu
 - SQL (Structured Query Language) - ustrukturyzowany język zapytań
 - relacja (tabela) - obszar w obrębie bazdy danych, który zawiera krotki i atrybuty (wiersze i kolumny), częściej używa się określenia 'tabela'
-- atrybut - jedna z wartości w krotce, częściej nazywany 'kolumną' lub 'polem'
-- krotka - pojedyczny wpis w tabeli bazy danych, który jest zbiorem atrybutów, częściej używa się określenia 'wiersz'
+- atrybut (pole) - jedna z wartości w krotce, częściej nazywany 'kolumną' lub 'polem'
+- krotka (rekord) - pojedyczny wpis w tabeli bazy danych, który jest zbiorem atrybutów, częściej używa się określenia 'wiersz'
 - kursor - kursor pozwala na programistyczne wykonywanie poleceń SQL w bazie danych i pobieranie danych z bazy. Kursor jest podobny do gniazda połączeń sieciowych lub uchwytu pliku
 - indeks - dodatkowe dane, które oprogramowanie bazy danych przechowuje w postaci wierszy i wstawia dodatkowo do tabeli, dzięki czemu wyszukiwanie informacji odbywa się bardzo szybko
 - struktura podstawowa - struktura: tabele (relacja), wiersze (krotka) i kolumny (atrybut)
 - tworzenie tabel - tworząc tabelę należy podać nazwę każdej kolumny występującej w tabeli oraz typ danych, który będzie przechowywany w każdej z kolumn – wpływa to na najbardziej efektywy sposób przechowywania i wyszukiwania danych w oparciu o ich typ
-- typy danych - zazwyczaj: tekst, liczba lib data
+- query - kwerenda, czyli zapytanie do bazy danych, kwerenda może być wstawiająca, wyszukująca, zmieniająca, usuwająca, zmieniająca strukturę tabel albo bazy
+- typy danych - char, varchar, text, longtext, int, float, date, time
 - modelowanie danych - rozbicie danych aplikacji na wiele tabel oraz ustalenie związków pomiędzy nimi
 - model danych - dokument projektowy, który pokazuje tabele i ich związki
+- modele baz danych: hierarchiczne, sieciowe, relacyjne i obiektowe
 - klucz logiczny - klucz, którego 'rzeczywisty świat' może użyć do wyszukiwania wierszy, powinienie być unikalny UNIQUE, np. Szukanie po nazwie
-- klucz główny - zazwyczaj jest liczbą przypisywaną automatycznie, jest używany tylko do łączenia wierszy z różnych tabel, klucze te są liczbami stałymi, dlatego zajmują bardzo mało miejsca w pamięci i mogą być bardzo szybko porównywane lub sortowane	
-- klucz obcy - zazwyczaj jest liczbą wskazującą klucz główny powiązanego wierwsza w innej tabeli
+- klucz główny (primary key)- zazwyczaj jest liczbą przypisywaną automatycznie, jest używany tylko do łączenia wierszy z różnych tabel, klucze te są liczbami stałymi, dlatego zajmują bardzo mało miejsca w pamięci i mogą być bardzo szybko porównywane lub sortowane	
+- klucz obcy (foreign key) - zazwyczaj jest liczbą wskazującą klucz główny powiązanego wierwsza w innej tabeli
+- sortowanie rekordów - porządkowanie wg kryteriow - nazwa lub nazwy pól wg których odbywa się sortowanie
 - kiedy zalecane jest używanie bazy danych:
 -- gdy aplikacja musi dokonać niewielkiej liczby różnych aktualizacji w ramach dużego zbioru danych,
 -- gdy dane są tak duże, że nie mieszczą się w słowniku, a trzeba je wielokrotnie przeszukiwać
@@ -26,6 +29,8 @@
 - transakcje wg ACID - warunki jakie transakcja (zbiór operacji na bazie danych) musi spełnić: Atomic (niepodzielność), Consistent (spójność), Isolation (odizolowanie), Durability (trwałość)
 - ORM Object Relational Mapper, np. SQLAlchemy
 - CRUD - Create, Read, Update, Delete
+- DBMS - Database Management System - system zarządzania bazą danych, np. MySQL, PostgreSQL, Firebird, Oracle database
+- 
 
 ## Zapytania SQL
 - CREATE TABLE	- tworzenie tabeli – należy podać dodatkowo nazwy i typy kolumn,	np. CREATE TABLE Utwory (tytuł TEXT, odtworzenie INTEGER);
